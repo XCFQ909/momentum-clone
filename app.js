@@ -1,8 +1,15 @@
-const loginInput = document.querySelector("#login-form input")
-const loginButton = document.querySelector("#login-form button")
+const loginForm = document.querySelector('#login-form')
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector('#greeting')
 
-function LoginBtnClick() {
-    console.log(loginInput.value)
+function onLoginSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.add('hidden')
+    const username = loginInput.value;
+    console.log(username);
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove('hidden')
 }
 
-loginButton.addEventListener("click", LoginBtnClick)
+
+loginForm.addEventListener("submit", onLoginSubmit)
