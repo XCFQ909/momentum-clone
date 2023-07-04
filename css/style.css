@@ -1,3 +1,150 @@
+@import "reset.css";
+@import "variables.css";
+
 .hidden {
     visibility: hidden;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#bgImage {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#clock {
+    position: absolute;
+    font-size: 65px;
+    font-weight: 800;
+    top: 30vh;
+    text-shadow: var(--shadow);
+}
+
+#quote {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 22px;
+    position: absolute;
+    bottom: 5vh;
+    text-shadow: var(--shadow);
+    opacity: 0.8;
+}
+
+#greeting {
+    position: absolute;
+    top: 25vh;
+    font-weight: 700;
+    font-size: 40px;
+    text-shadow: var(--shadow);
+}
+#login-form {
+    position: absolute;
+    top: 25vh;
+    font-weight: 700;
+    font-size: 40px;
+    text-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+}
+#login-form input {
+    margin-left: 15px;
+    height: 30px;
+    width: 200px;
+    font-weight: 600;
+    font-size: 40px;
+    color: white;
+    text-shadow: var(--shadow);
+    text-align: center;
+
+    display: block;
+    background: 0;
+    border: 0;
+    border-bottom: 2px solid #fff;
+}
+#login-form input:focus {
+    display: block;
+    background: 0;
+    border: 0;
+    border-bottom: 2px solid #fff;
+
+    outline: none;
+}
+
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    top: 50vh;
+}
+#todo-form span {
+    font-size: 25px;
+    text-shadow: var(--shadow);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+#todo-form input {
+    height: 30px;
+    width: 380px;
+    background: 0;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+#todo-form input:focus {
+    outline: none;
+}
+#todo-form input::placeholder {
+    font-size: 25px;
+    color: white;
+}
+
+
+#todo-list {
+    position: absolute;
+    top: 10vh;
+    right: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#todo-list li {
+    display: flex;
+    align-items: center;
+}
+#todo-list span {
+    font-size: 20px;
+    margin: 5px 0;
+    margin-right: 5px;
+    text-shadow: var(--shadow);
+}
+#todo-list button {
+    background: 0;
+    border: 0;
+    outline: 0;
+    height: 5px;
+    width: 5px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
