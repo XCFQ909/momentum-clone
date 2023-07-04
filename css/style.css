@@ -162,3 +162,11 @@ main {
     margin-bottom: 5px;
     text-shadow: var(--shadow);
 }
+
+
+#HiToNico {
+    position: absolute;
+    top: 10vh;
+    text-shadow: var(--shadow);
+    color: white;
+  }
